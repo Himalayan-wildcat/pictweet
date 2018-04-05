@@ -1,12 +1,8 @@
-<div class="contents row" >
+  <div class="contents row" >
+    <p><%= @nickname %>'s POST</p>
     <% @tweets.each do |tweet| %>
       <div class="content_post" style="background-image: url(<%= tweet.image %>);">
         <%= simple_format(tweet.text) %>
-        <span class="name">
-          <a href="">
-            <span>posted by</span><%= tweet.user.nickname %>
-          </a>
-        </span>
       </div>
     <% end %>
   </div>
