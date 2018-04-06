@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def show
     @nickname = current_user.nickname
-    @tweets = current_user.tweets.order("created_at desc")
+    @tweets = current_user.tweets.order("created_at desc").page(params[:page]).per(5)
   end
 
 
